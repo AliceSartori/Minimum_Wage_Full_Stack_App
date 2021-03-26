@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <title>Minimum Wage</title>      
+  </head>
+  <body>
+      <!-- <main>
+      <section class="landing">
+        <h1 id="logo">Afloat</h1>
+        <ul class="nav-links">
+          <li>Home</li>
+          <li>Contact</li>
+          <li>About</li>
+        </ul>
+      </section>
+    </main>
+    <div class="intro">
+      <div class="intro-text">
+        <h1 class="hide">
+          <span class="text">Creating Innovation</span>
+        </h1>
+        <h1 class="hide">
+          <span class="text">For Everyday</span>
+        </h1>
+        <h1 class="hide">
+          <span class="text">People</span>
+        </h1>
+      </div>
+    </div> -->
+    <!-- <div class="slider"></div> -->
+    <div class="vert-container">
+      <!-- Initialize a select button -->
+      <select id="selectButton"></select>
+      <!-- Create a div where the graph will take place -->
+      <div id="my_dataviz"></div>
+      <svg id = "logo" width="1089" height="109" viewBox="0 0 1089 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M104.896 5.35198V105H91.792V30.696L58.672 105H49.456L16.192 30.552V105H3.08801V5.35198H17.2L54.064 87.72L90.928 5.35198H104.896Z" stroke="white" stroke-width="5"/>
+        <path d="M140.223 4.63198V105H127.119V4.63198H140.223Z" stroke="white" stroke-width="5"/>
+        <path d="M241.469 105H228.365L175.661 25.08V105H162.557V4.48798H175.661L228.365 84.264V4.48798H241.469V105Z" stroke="white" stroke-width="5"/>
+        <path d="M276.911 4.63198V105H263.807V4.63198H276.911Z" stroke="white" stroke-width="5"/>
+        <path d="M401.052 5.35198V105H387.948V30.696L354.828 105H345.612L312.348 30.552V105H299.244V5.35198H313.356L350.22 87.72L387.084 5.35198H401.052Z" stroke="white" stroke-width="5"/>
+        <path d="M436.091 4.63198V68.136C436.091 77.064 438.252 83.688 442.572 88.008C446.988 92.328 453.083 94.488 460.859 94.488C468.539 94.488 474.539 92.328 478.859 88.008C483.275 83.688 485.483 77.064 485.483 68.136V4.63198H498.587V67.992C498.587 76.344 496.907 83.4 493.547 89.16C490.187 94.824 485.627 99.048 479.867 101.832C474.203 104.616 467.82 106.008 460.716 106.008C453.612 106.008 447.179 104.616 441.419 101.832C435.755 99.048 431.244 94.824 427.884 89.16C424.62 83.4 422.987 76.344 422.987 67.992V4.63198H436.091Z" stroke="white" stroke-width="5"/>
+        <path d="M622.255 5.35198V105H609.151V30.696L576.031 105H566.815L533.551 30.552V105H520.447V5.35198H534.559L571.423 87.72L608.287 5.35198H622.255Z" stroke="white" stroke-width="5"/>
+        <path d="M809.013 4.63198L779.925 105H765.237L741.909 24.216L717.717 105L703.173 105.144L675.093 4.63198H689.061L710.949 89.736L735.141 4.63198H749.829L772.869 89.448L794.901 4.63198H809.013Z" stroke="white" stroke-width="5"/>
+        <path d="M882.682 82.68H838.906L830.842 105H817.018L853.306 5.20798H868.426L904.57 105H890.746L882.682 82.68ZM878.938 72.024L860.794 21.336L842.65 72.024H878.938Z" stroke="white" stroke-width="5"/>
+        <path d="M996.417 33.72C993.633 27.864 989.601 23.352 984.321 20.184C979.041 16.92 972.897 15.288 965.889 15.288C958.881 15.288 952.545 16.92 946.881 20.184C941.313 23.352 936.897 27.96 933.633 34.008C930.465 39.96 928.881 46.872 928.881 54.744C928.881 62.616 930.465 69.528 933.633 75.48C936.897 81.432 941.313 86.04 946.881 89.304C952.545 92.472 958.881 94.056 965.889 94.056C975.681 94.056 983.745 91.128 990.081 85.272C996.417 79.416 1000.11 71.496 1001.17 61.512H961.137V50.856H1015.14V60.936C1014.37 69.192 1011.78 76.776 1007.36 83.688C1002.94 90.504 997.137 95.928 989.937 99.96C982.737 103.896 974.721 105.864 965.889 105.864C956.577 105.864 948.081 103.704 940.401 99.384C932.721 94.968 926.625 88.872 922.113 81.096C917.697 73.32 915.489 64.536 915.489 54.744C915.489 44.952 917.697 36.168 922.113 28.392C926.625 20.52 932.721 14.424 940.401 10.104C948.081 5.68798 956.577 3.47998 965.889 3.47998C976.545 3.47998 985.953 6.11998 994.113 11.4C1002.37 16.68 1008.37 24.12 1012.11 33.72H996.417Z" stroke="white" stroke-width="5"/>
+        <path d="M1045.57 15.288V48.84H1082.14V59.64H1045.57V94.2H1086.46V105H1032.46V4.48798H1086.46V15.288H1045.57Z" stroke="white" stroke-width="5"/>
+        </svg>
+        <h1>A Historical Examination Throughout the Decades by State</h1>    
+    </div>
+    <div class="outer-wrapper">
+      <div class = "wrapper">
+        <section id="timeline">
+          <div class="tl-item1">            
+            <div class="tl-bg1" style="background-image: url(./Resources/1970s_Workers2.jpg)"></div>
+            <div class="tl-year1">
+              <p class="f2 heading--sanSerif">1970-1980</p>              
+            </div>
+            <div class="tl-content1">
+              <h1>Stay in Frame to View Timeline</h1>
+              <p>
+
+              </p>       
+            </div>
+            <div id="timeline1">
+              <ul>
+                <li><a href="" class="timelineYear">1970</a></li>
+                <li><a href="" class="timelineYear">1971</a></li>
+                <li><a href="" class="timelineYear">1972</a></li>
+                <li><a href="" class="timelineYear">1973</a></li>
+                <li><a href="" class="timelineYear">1974</a></li>
+                <li><a href="" class="timelineYear">1975</a></li>
+                <li><a href="" class="timelineYear">1976</a></li>
+                <li><a href="" class="timelineYear">1977</a></li>
+                <li><a href="" class="timelineYear">1978</a></li>
+                <li><a href="" class="timelineYear">1979</a></li>
+                <li><a href="" class="timelineYear">1980</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item2">
+            <div class="tl-bg2" style="background-image: url(./Resources/1980s_Worker3.jpg)"></div>
+            <div class="tl-year2">
+              <p class="f2 heading--sanSerif">1980-1990</p>
+            </div>
+            <div class="tl-content2">
+              <h1 class="f3 text--accent ttu">Stay in Frame to View Timeline</h1>
+              <p>
+
+              </p>
+            </div>
+            <div id="timeline2">
+              <ul>
+                <li><a href="" class="timelineYear">1980</a></li>
+                <li><a href="" class="timelineYear">1981</a></li>
+                <li><a href="" class="timelineYear">1982</a></li>
+                <li><a href="" class="timelineYear">1983</a></li>
+                <li><a href="" class="timelineYear">1984</a></li>
+                <li><a href="" class="timelineYear">1985</a></li>
+                <li><a href="" class="timelineYear">1986</a></li>
+                <li><a href="" class="timelineYear">1987</a></li>
+                <li><a href="" class="timelineYear">1988</a></li>
+                <li><a href="" class="timelineYear">1989</a></li>
+                <li><a href="" class="timelineYear">1990</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item3">
+            <div class="tl-bg3" style="background-image: url(./Resources/1990s_Worker.jpg)"></div>
+            <div class="tl-year3">
+              <p class="f2 heading--sanSerif">1990-2000</p>
+            </div>
+            <div class="tl-content3">
+              <h1 class="f3 text--accent ttu">Stay in Frame to View Timeline</h1>  
+              <p>
+
+              </p>            
+            </div>
+            <div id="timeline3">
+              <ul>
+                <li><a href="" class="timelineYear">1990</a></li>
+                <li><a href="" class="timelineYear">1991</a></li>
+                <li><a href="" class="timelineYear">1992</a></li>
+                <li><a href="" class="timelineYear">1993</a></li>
+                <li><a href="" class="timelineYear">1994</a></li>
+                <li><a href="" class="timelineYear">1995</a></li>
+                <li><a href="" class="timelineYear">1996</a></li>
+                <li><a href="" class="timelineYear">1997</a></li>
+                <li><a href="" class="timelineYear">1998</a></li>
+                <li><a href="" class="timelineYear">1999</a></li>
+                <li><a href="" class="timelineYear">2000</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item4">
+            <div class="tl-bg4" style="background-image: url(./Resources/2000-2010_Workers.jpg)"></div>
+            <div class="tl-year4">
+              <p class="f2 heading--sanSerif">2000-2010</p>
+            </div>
+            <div class="tl-content4">
+              <h1 class="f3 text--accent ttu">Stay in Frame to View Timeline</h1>
+              <p>
+
+              </p>         
+            </div>
+            <div id="timeline4">
+              <ul>
+                <li><a href="" class="timelineYear">2000</a></li>
+                <li><a href="" class="timelineYear">2001</a></li>
+                <li><a href="" class="timelineYear">2002</a></li>
+                <li><a href="" class="timelineYear">2003</a></li>
+                <li><a href="" class="timelineYear">2004</a></li>
+                <li><a href="" class="timelineYear">2005</a></li>
+                <li><a href="" class="timelineYear">2006</a></li>
+                <li><a href="" class="timelineYear">2007</a></li>
+                <li><a href="" class="timelineYear">2008</a></li>
+                <li><a href="" class="timelineYear">2009</a></li>
+                <li><a href="" class="timelineYear">2010</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item5">
+            <div class="tl-bg5" style="background-image: url(./Resources/2010-2020_Workers3.jpg)"></div>
+            <div class="tl-year5">
+              <p class="f2 heading--sanSerif">2010-2020</p>
+            </div>
+            <div class="tl-content5">
+              <h1 class="f3 text--accent ttu">Stay in Frame to View Timeline</h1>
+              <p>
+
+              </p>
+            </div>
+            <div id="timeline5">
+              <ul>
+                <li><a href="" class="timelineYear">2010</a></li>
+                <li><a href="" class="timelineYear">2011</a></li>
+                <li><a href="" class="timelineYear">2012</a></li>
+                <li><a href="" class="timelineYear">2013</a></li>
+                <li><a href="" class="timelineYear">2014</a></li>
+                <li><a href="" class="timelineYear">2015</a></li>
+                <li><a href="" class="timelineYear">2016</a></li>
+                <li><a href="" class="timelineYear">2017</a></li>
+                <li><a href="" class="timelineYear">2018</a></li>
+                <li><a href="" class="timelineYear">2019</a></li>
+                <li><a href="" class="timelineYear">2020</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="bot-vert-container">
+      Verical Scroll
+      <div class="one">One</div>
+      <div class="two">Two</div>
+      <div class="three">Three</div>
+      <div class="four">Four</div>
+      <div class="five">Five</div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" 
+      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" 
+      crossorigin="anonymous">
+    </script>    
+    <script src="project-2.js"></script>    
+  </body>
+</html>
