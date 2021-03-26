@@ -10,7 +10,7 @@ var x = d3.scaleLinear().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
 
 
-// Define the line
+// Define the line  
 var valueLine = d3.line()
     .x(function(d) { return x(d.Year); })
     .y(function(d) { return y(d.Minwage); })
@@ -91,9 +91,9 @@ d3.csv("../Data/minwage_forgraph.csv", function(error, data) {
         .data(nest)
         .enter()
         .append("option")
-        .attr("value", function(d){
-            return d.key;
-        })
+       .attr("value", function(d){
+           return d.key;
+       })
         .text(function(d){
             return d.key;
         })
