@@ -271,7 +271,7 @@ body {
 
 #logo {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -393,7 +393,9 @@ body {
 
 .vert-container h1 {
   margin: 0%;
-  padding-left: 20%;
+  top: 425px;
+  left: 500px;
+  position: absolute;
 }
 
 .plot-container {
@@ -402,13 +404,11 @@ body {
 
 .main-svg {
   position: relative;
-  top: 575px;
+  top: 495px;
   left: 250px;
   pointer-events: none;
   width: 1400px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border: 4px solid gray;
 }
 
 .one {
