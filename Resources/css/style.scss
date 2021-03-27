@@ -413,6 +413,17 @@ body {
   padding-left: 20%;
 }
 
+.vert-container iframe{
+  margin: 0%;
+  border: none;
+  width: 500px;
+  height: value;
+  border-top: goldenrod 1px dotted;
+  border-right: goldenrod 2px dotted;
+  border-left: goldenrod 2px dotted;
+  border-bottom: goldenrod 4px dotted;
+}
+
 .one{
   background-color: blue;
   display: flex;
