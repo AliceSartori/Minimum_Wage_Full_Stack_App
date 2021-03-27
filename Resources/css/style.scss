@@ -403,9 +403,9 @@ body {
   }
 }
 
-.vert-container, .bot-vert-container{
-  height: 100vh;
-  width: 100%;
+.vert-container{
+  height: 135vh;
+  width: 100%; 
 }
 
 .vert-container h1{
@@ -413,15 +413,17 @@ body {
   padding-left: 20%;
 }
 
-.vert-container iframe{
-  margin: 0%;
-  border: none;
-  width: 500px;
-  height: value;
-  border-top: goldenrod 1px dotted;
-  border-right: goldenrod 2px dotted;
-  border-left: goldenrod 2px dotted;
-  border-bottom: goldenrod 4px dotted;
+.plot-container{
+  position:absolute;
+}
+
+.main-svg {
+  position: relative;
+  top: 575px;
+  left: 250px;
+  pointer-events: none;
+  width: 1400px;
+  align-items: center;
 }
 
 .one{
