@@ -63,7 +63,7 @@ var svg = d3.select("#my_dataviz")
 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("../minwage.csv", function(data) {
+d3.csv("C:\Users\bxprd\Data Analytics Bootcamp\Git_Repos\data-analysis-project-2\Data\minwage_code.csv", function(data) {
 
     // List of groups (here I have one group per column)
     var allGroup = ["valueA", "valueB", "valueC"]
