@@ -1,6 +1,6 @@
-var margin = {top: 80, right: 180, bottom: 80, left: 180},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var margin = {top: 40, right: 40, bottom: 135, left: 40},
+    width = 1000 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
     
     
     // .attr("width", svgWidth)
@@ -19,7 +19,7 @@ d3.csv("../Data/MinWageByState.csv", function(error, data){
 	// Get every column value
 	var elements = Object.keys(data[0])
 		.filter(function(d){
-			return ((d != "Year") & (d != "State"));
+			return ((d != "year") & (d != "state"));
 		});
 	var selection = elements[0];
 
@@ -30,7 +30,7 @@ d3.csv("../Data/MinWageByState.csv", function(error, data){
 			.range([height, 0]);
 
 	var x = d3.scale.ordinal()
-			.domain(data.map(function(d){ return d.State;}))
+			.domain(data.map(function(d){ return d.state;}))
 			.rangeBands([0, width]);
 
 
@@ -51,13 +51,7 @@ d3.csv("../Data/MinWageByState.csv", function(error, data){
       	.style("text-anchor", "end")
       	.attr("dx", "-.8em")
       	.attr("dy", "-.55em")
-          .attr("transform", "rotate(-90)" );
-        // .attr('class', 'grid')
-        // .attr('transform', `translate(0, ${height})`)
-        // .call(d3.axisBottom()
-        //     .scale(xScale)
-        //     .tickSize(-height, 0,0)
-        //     .tickFormat(''));
+        .attr("transform", "rotate(-90)" );
 
 
  	svg.append("g")
@@ -81,21 +75,21 @@ d3.csv("../Data/MinWageByState.csv", function(error, data){
 		})
 		.append("title")
 		.text(function(d){
-			return d.State + " : " + d[selection];
+			return d.state + " : " + d[selection];
         });
     
     svg.append('text')
-        .attr('x', -150)
-        .attr('y', -40)
+        .attr('x', -300)
+        .attr('y', -28)
         .attr('transform', 'rotate(-90)')
         .attr('text-anchor', 'middle')
         .text('State Minimum Wage ($)');
 
     svg.append('text')
-        .attr('x', 320)
-        .attr('y', 420)
+        .attr('x', 420)
+        .attr('y', 600)
         .attr('text-anchor', 'middle')
-        .text('US States and Territories');
+		.text('US States and Territories');
 
 	var selector = d3.select("#drop")
     	.append("select")
@@ -122,7 +116,7 @@ d3.csv("../Data/MinWageByState.csv", function(error, data){
            		.ease("linear")
            		.select("title")
            		.text(function(d){
-           			return d.State + " : " + d[selection.value];
+           			return d.state + " : " + d[selection.value];
            		});
       
            	d3.selectAll("g.y.axis")
@@ -140,6 +134,14 @@ d3.csv("../Data/MinWageByState.csv", function(error, data){
       .text(function(d){
         return d;
       })
+});
 
-
+d3.csv("../FedMinWageByYear.csv", function(error, fedData) {
+	if (error) throw error;
+	svg.append("g")
+	.attr("transform", "translate(0, "+y(fedData)+")")
+	.append("line")
+	.attr("x2", width)
+	.style("stroke", "#2ecc71")
+	.style("stroke-width", "5px");
 });
