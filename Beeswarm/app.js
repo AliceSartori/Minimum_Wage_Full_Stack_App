@@ -51,7 +51,13 @@ d3.csv("../Data/MinWageByState.csv", function(error, data){
       	.style("text-anchor", "end")
       	.attr("dx", "-.8em")
       	.attr("dy", "-.55em")
-      	.attr("transform", "rotate(-90)" );
+          .attr("transform", "rotate(-90)" );
+        // .attr('class', 'grid')
+        // .attr('transform', `translate(0, ${height})`)
+        // .call(d3.axisBottom()
+        //     .scale(xScale)
+        //     .tickSize(-height, 0,0)
+        //     .tickFormat(''));
 
 
  	svg.append("g")
@@ -76,7 +82,20 @@ d3.csv("../Data/MinWageByState.csv", function(error, data){
 		.append("title")
 		.text(function(d){
 			return d.State + " : " + d[selection];
-		});
+        });
+    
+    svg.append('text')
+        .attr('x', -150)
+        .attr('y', -40)
+        .attr('transform', 'rotate(-90)')
+        .attr('text-anchor', 'middle')
+        .text('State Minimum Wage ($)');
+
+    svg.append('text')
+        .attr('x', 320)
+        .attr('y', 420)
+        .attr('text-anchor', 'middle')
+        .text('US States and Territories');
 
 	var selector = d3.select("#drop")
     	.append("select")
