@@ -2,7 +2,7 @@
 
 ## Team Members: LaTisha Habersham, Manny Mejia, Alice Satori and Jack Griffin
 
-![Min Wage](https://media.giphy.com/media/McTlbb1oyHvHm2ToXp/giphy.gif)
+<!-- ![Min Wage](https://media.giphy.com/media/McTlbb1oyHvHm2ToXp/giphy.gif) -->
 
 ### Summary and Motivation
 The first US minimum wage was set in 1938 due to The Fair Labor Standards Act (FLSA). It was pass by Franklin D. Roosevelt through his New Deal to protect workers from The Great Depression. The purpose of the minimum wage was to stabilize the post-depression economy and protect the workers in the labor force. The minimum wage was designed to create a minimum standard of living to protect the health and well-being of employees. The idea was the hope of greater equity and the distribution of income between the high paid and the low pay may to be narrowed. Poverty may be reduced as the low earners gain more income and the unemployed may be encouraged to join the labour market.<br>
@@ -61,3 +61,6 @@ Wage Defenders decieded to review at the United States State and Federal minimum
 (Link to picture of Line graph)<br>
 (Link to picture of Bar Graph)<br>
 (Link to picture of Time Line)<br>
+
+<hr>
+![Min Wage](https://media.giphy.com/media/McTlbb1oyHvHm2ToXp/giphy.gif)
