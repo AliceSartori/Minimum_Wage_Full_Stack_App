@@ -14,7 +14,7 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/
 
 // // Load in geojson data
 // var geoData = "./static/data/" + year + ".geojson";
-var geoData = "./static/data/minwage2try.geojson";
+var geoData = "./static/geojson/minwage2try.geojson";
 // var FederalchoroplethLayer ;
 var myMap ;
 

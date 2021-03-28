@@ -13,7 +13,11 @@ app = Flask(__name__)
 # 3. Define what to do when a user hits the index route
 @app.route("/")
 def home():
-    return render_template("project-2-test.html", text="A Historical Examination Throughout the Decades by State") 
+    return render_template("project-2-test.html", text="A Historical Examination Throughout the Decades by State")
+
+@app.route("/alice")
+def test():
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
