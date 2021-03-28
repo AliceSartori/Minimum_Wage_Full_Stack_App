@@ -52,7 +52,13 @@ Wage Defenders decieded to review at the United States State and Federal minimum
         2. Line Graph<br>
         3. Bar Graph<br>
         4. Time Line<br>
+
 #### Action
+(Link to notebooks here)<br>
+(Link to python here)<br>
 
 #### Results
-
+(Link to picture of Chloropleth Map)<br>
+(Link to picture of Line graph)<br>
+(Link to picture of Bar Graph)<br>
+(Link to picture of Time Line)<br>
