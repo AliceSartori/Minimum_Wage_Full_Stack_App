@@ -18,7 +18,7 @@ var geoData = "./static/geojson/minwage2try.geojson";
 // var FederalchoroplethLayer ;
 var myMap ;
 
-var year = 1970;
+// var year = 1970;
 var StatechoroplethLayer;
 var FederalchoroplethLayer;
 var list = [];
