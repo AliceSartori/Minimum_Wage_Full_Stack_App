@@ -1,3 +1,5 @@
+var fedMinWage = [1.3, 1.3, 1.6, 1.6, 1.6, 1.6, 2.2, 2.2, 2.2, 2.9, 3.1, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.8, 4.25, 4.25, 4.25, 4.25, 4.25, 4.75, 5.15, 5.15, 5.15, 5.15, 5.15, 5.15, 5.15, 5.15, 5.15, 5.15, 5.85, 6.55, 7.25, 7.25, 7.25, 7.25, 7.25, 7.25, 7.25, 7.25, 7.25, 7.25, 7.25];
+
 var margin = {top: 40, right: 40, bottom: 135, left: 40},
     width = 1000 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
@@ -145,3 +147,41 @@ d3.csv("../FedMinWageByYear.csv", function(error, fedData) {
 	.style("stroke", "#2ecc71")
 	.style("stroke-width", "5px");
 });
+
+// .on('mouseenter', function (s, i) {
+//     d3.select(this)
+//         .transition()
+//         .duration(300)
+//         .attr('opacity', 0.6)
+//         .attr('x', (a) => xScale(a.language) - 5)
+//         .attr('width', xScale.bandwidth() + 10)
+
+//     svg.append('line')
+//         .attr('x1', 0)
+//         .attr('y1', y)
+//         .attr('x2', width)
+//         .attr('y2', y)
+//         .attr('stroke', 'red')
+
+//  .on('mouseleave', function () {
+	// 	d3.selectAll('.value')
+	// 		.attr('opacity', 1)
+
+	//  d3.select(this)
+	// 		.transition()
+	// 		.duration(300)
+	// 		.attr('opacity', 1)
+	// 		.attr('x', (a) => xScale(a.language))
+	// 		.attr('width', xScale.bandwidth())
+
+	//  chart.selectAll('#limit').remove()
+	//  chart.selectAll('.divergence').remove()
+	// })
+// })
+
+// svg.append('g')
+//       .attr('class', 'grid')
+//       .call(makeYLines()
+//         .tickSize(-width, 0, 0)
+//         .tickFormat('')
+//       )
