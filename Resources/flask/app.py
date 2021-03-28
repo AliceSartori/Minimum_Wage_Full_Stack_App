@@ -31,7 +31,7 @@ def test():
 def test2():
     year = request.args.get('year')
     print(year)
-    if(year == ''):
+    if(year == None):
         year = 1970
     return render_template("index7.html", value=year)
 
