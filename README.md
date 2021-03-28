@@ -5,9 +5,8 @@
 ![Min Wage](https://media.giphy.com/media/McTlbb1oyHvHm2ToXp/giphy.gif)
 
 ### Summary and Motivation
-The purpose of the minimum wage was to stabilize the post-depression economy and protect the workers in the labor force. The minimum wage was designed to create a minimum standard of living to protect the health and well-being of employees.
+The first US minimum wage was set in 1938 due to The Fair Labor Standards Act (FLSA). It was pass by Franklin D. Roosevelt through his New Deal to protect workers from The Great Depression. The purpose of the minimum wage was to stabilize the post-depression economy and protect the workers in the labor force. The minimum wage was designed to create a minimum standard of living to protect the health and well-being of employees. The idea was the hope of greater equity and the distribution of income between the high paid and the low pay may to be narrowed. Poverty may be reduced as the low earners gain more income and the unemployed may be encouraged to join the labour market.<br>
 
-Greater equity will be achieved, and the distribution of income between the high paid and the low pay may be narrowed. Poverty may be reduced as the low paid gain more income and the unemployed may be encouraged to join the labour market.
 #### Situation
 Wage Defenders decieded to review at the United States State and Federal minimum wage between 1970 - 2020. We wanted see how minimum wages increase over time as well as compare the minimum wage between the states.<br>
 
