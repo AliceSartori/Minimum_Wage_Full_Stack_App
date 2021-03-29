@@ -2,6 +2,8 @@ import numpy as np
 
 
 from flask import Flask, jsonify, render_template,request
+from sqlalchemy import create_engine
+
 
 # 2. Create an app, being sure to pass __name__
 app = Flask(__name__)
@@ -14,9 +16,10 @@ app = Flask(__name__)
 #     return render_template("index_proj2.html")
 
 @app.route("/")
-def test4():
+def createhomepage():
     return render_template("project-2-test.html", text="A Historical Examination Throughout the Decades by State")
 
+<<<<<<< HEAD
 @app.route("/map")
 def test():
 
@@ -29,15 +32,53 @@ def test():
 
 @app.route("/barchart")
 def test2():
+=======
+# @app.route("/map/<year>")
+@app.route("/map")
+def createmap():
+    year = request.args.get('year')
+    if(year == None):
+        year = 1970
+
+    engine = create_engine('postgresql+psycopg2://alicesartori@localhost/Project_3')
+    conn = engine.connect()
+
+    sql_string ='SELECT state, state_minimum_wage, year FROM geography WHERE year=\'%s\'' % (year)
+    rows = engine.execute(sql_string).fetchall()
+
+    minimum_wage = []
+    state_list = []
+    for index, row in enumerate(rows):
+        minimum_wage.append(row[1])
+        state_list.append(row[0].strip())
+
+    #data2pass = [1,10,20,5,40]
+    #trace_x = [1,2,3,4,10]
+
+
+
+
+    print(state_list)
+    return render_template("index_alice.html",value=year ,trace_y = minimum_wage , labels=state_list)
+
+@app.route("/barchart")
+def createchart():
+>>>>>>> c7203518050de969143f7f883528472b6a29f94f
     # year = request.args.get('year')
     # print(year)
     # if(year == None):
     #     year = 1970
+<<<<<<< HEAD
     return render_template("index7.html")
+=======
+    return render_template("index_latisha.html")
 
-# @app.route("/jack")
-# def test3():
-#     return render_template("index7.html")
+
+@app.route("/linechart")
+def createlinechart():
+>>>>>>> c7203518050de969143f7f883528472b6a29f94f
+
+    return render_template("index_jack.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

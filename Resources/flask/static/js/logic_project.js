@@ -204,3 +204,39 @@ legend.onAdd = function (map) {
     return div;
 };
 legend.addTo(myMap);
+
+
+
+
+var trace1 = {
+  x: label_states,
+  y: trace_y,
+  type: 'scatter'
+};
+
+// var trace2 = {
+//   x: [1, 2, 3, 4],
+//   y: [16, 5, 11, 9],
+//   type: 'scatter'
+// };
+var layout = {
+  xaxis: {
+    tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
+    tick0: 1,
+    dtick: 1,
+    ticktext:label_states
+  },
+  title: {
+  text: "Year: " + year,
+  font: {
+    family: 'Courier New, monospace',
+    size: 24
+  },
+  xref: 'paper',
+  x: 0.05,
+}
+}
+
+var data = [trace1];
+
+Plotly.newPlot('myDiv', data, layout);
