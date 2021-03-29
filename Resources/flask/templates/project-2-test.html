@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
     <title>Minimum Wage</title>
   </head>
   <body>
+    <div class = "top">
+      <div class="navbar">
+        <a href="">About</a>
+        <a href="">Comparison</a>
+        <div class="dropdown">
+          <button class="dropbtn">Plots 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="map">Chloropleth Map</a>
+            <a href="linechart">Line Chart</a>
+            <a href="barchart">Bar Chart</a>
+            <a href="bubblechart">Bubble Chart</a>
+          </div>
+        </div> 
+      </div>
+    </div>
     <div class="vert-container">
       <svg id = "logo" width="1089" height="109" viewBox="0 0 1089 109" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M104.896 5.35198V105H91.792V30.696L58.672 105H49.456L16.192 30.552V105H3.08801V5.35198H17.2L54.064 87.72L90.928 5.35198H104.896Z" stroke="#386280" stroke-width="5"/>
@@ -432,8 +453,6 @@
           5.15],"type": "choropleth"}],"name": "2020"}]);}).then(function(){Plotly.animate('6f5aae03-b7d7-47f3-ba34-e6207db92c65',null);})};
           </script>
           </div>
-
-
     </div>
     <div class="outer-wrapper">
       <div class = "wrapper">
@@ -449,22 +468,10 @@
 
               </p>
             </div>
-
-
-            <div>
-            <a href='/alice'>Alice</a>
-            <a></a>
-            <a></a>
-            <a></a>
-            </div>
-
             <div id="timeline1">
-              <ul>
-                <!-- Initialize a select button -->
-                <!-- <select id="selectButton"></select> -->
-                <!-- Create a div where the graph will take place -->
-                <!-- <div id="my_dataviz"></div> -->
-                <li><a href="/alice" class="timelineYear">1970</a></li>
+              <ul class="test">
+                <!-- <li data-toggle="modal" data-target="#modalnew" data-whatever="1970" class="openmodal"><a >1970</a></li> -->
+                <li class="active"><a href="" class="timelineYear">1970</a></li>
                 <li><a href="" class="timelineYear">1971</a></li>
                 <li><a href="" class="timelineYear">1972</a></li>
                 <li><a href="" class="timelineYear">1973</a></li>
@@ -477,6 +484,22 @@
                 <li><a href="" class="timelineYear">1980</a></li>
               </ul>
             </div>
+            <!-- <div class="modal fade" id="modalnew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalnew">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body"> Python is a high-level, general-purpose and a very popular programming language..</div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
           </div>
           <div class="tl-item2">
             <div class="tl-bg2" style="background-image: url(../static/images/1980s_Worker3.jpg)"></div>
@@ -589,21 +612,12 @@
         </section>
       </div>
     </div>
-    <div class="bot-vert-container">
-      Verical Scroll
-      <div class="one">One</div>
-      <div class="two">Two</div>
-      <div class="three">Three</div>
-      <div class="four">Four</div>
-      <div class="five">Five</div>
-    </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
-      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
-      crossorigin="anonymous">
-    </script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="../static/js/project-2.js"></script>
+    
+    <!-- {{url_for('static', filename='js/project-2.js')}} -->
 
   </body>
 </html>

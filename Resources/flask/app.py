@@ -17,30 +17,27 @@ app = Flask(__name__)
 def test4():
     return render_template("project-2-test.html", text="A Historical Examination Throughout the Decades by State")
 
-@app.route("/alice")
+@app.route("/map")
 def test():
 
-    year = request.args.get('year')
+    # year = request.args.get('year')
 
-    if(year == None):
-        year = 1970
+    # if(year == None):
+    #     year = 1970
 
-    return render_template("index.html", value=year)
+    return render_template("index.html")
 
-@app.route("/Latisha")
+@app.route("/barchart")
 def test2():
-    year = request.args.get('year')
-    print(year)
-    if(year == None):
-        year = 1970
-    return render_template("index7.html", value=year)
+    # year = request.args.get('year')
+    # print(year)
+    # if(year == None):
+    #     year = 1970
+    return render_template("index7.html")
 
 # @app.route("/jack")
 # def test3():
 #     return render_template("index7.html")
-
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)

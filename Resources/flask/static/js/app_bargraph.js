@@ -127,26 +127,27 @@ d3.csv("./static/csv/MinWageByState.csv", function(error, data){
 
          });
 
-    selector.selectAll("option")
-      .data(elements)
-      .enter().append("option")
-      .attr("value", function(d){
-        return d;
-      })
-      .text(function(d){
-        return d;
-      })
-});
+		 selector.selectAll("option")
+		 .data(elements)
+		 .enter().append("option")
+		 .attr("value", function(d){
+			 return d;
+		})
+		
+		.text(function(d){
+			return d;
+		})
+	});
 
-d3.csv("./static/csv/FedMinWageByYear.csv", function(error, fedData) {
-	if (error) throw error;
-	svg.append("g")
-	.attr("transform", "translate(0, "+y(fedData)+")")
-	.append("line")
-	.attr("x2", width)
-	.style("stroke", "#2ecc71")
-	.style("stroke-width", "5px");
-});
+// d3.csv("./static/csv/FedMinWageByYear.csv", function(error, fedData) {
+// 	if (error) throw error;
+// 	svg.append("g")
+// 	.attr("transform", "translate(0, "+ y(fedData)+")")
+// 	.append("line")
+// 	.attr("x2", width)
+// 	.style("stroke", "#2ecc71")
+// 	.style("stroke-width", "5px");
+// });
 
 // .on('mouseenter', function (s, i) {
 //     d3.select(this)
