@@ -19,20 +19,6 @@ app = Flask(__name__)
 def createhomepage():
     return render_template("project-2-test.html", text="A Historical Examination Throughout the Decades by State")
 
-<<<<<<< HEAD
-@app.route("/map")
-def test():
-
-    # year = request.args.get('year')
-
-    # if(year == None):
-    #     year = 1970
-
-    return render_template("index.html")
-
-@app.route("/barchart")
-def test2():
-=======
 # @app.route("/map/<year>")
 @app.route("/map")
 def createmap():
@@ -55,28 +41,20 @@ def createmap():
     #data2pass = [1,10,20,5,40]
     #trace_x = [1,2,3,4,10]
 
-
-
-
     print(state_list)
     return render_template("index_alice.html",value=year ,trace_y = minimum_wage , labels=state_list)
 
 @app.route("/barchart")
 def createchart():
->>>>>>> c7203518050de969143f7f883528472b6a29f94f
     # year = request.args.get('year')
     # print(year)
     # if(year == None):
     #     year = 1970
-<<<<<<< HEAD
-    return render_template("index7.html")
-=======
     return render_template("index_latisha.html")
 
 
 @app.route("/linechart")
 def createlinechart():
->>>>>>> c7203518050de969143f7f883528472b6a29f94f
 
     return render_template("index_jack.html")
 

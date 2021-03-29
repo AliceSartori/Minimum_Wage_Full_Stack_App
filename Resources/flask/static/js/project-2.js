@@ -9,6 +9,11 @@ $(document).ready(function(){
   $.easing.easeOutCubic = function (x, t, b, c, d) {
     return c*((t=t/d-1)*t*t + 1) + b;
   }
+
+$(document).on('click','.test li', function(){
+    alert($(this).text());
+    return false;
+ });
   
   for(i=0; i<=nums.length; i++){
     $(".tl-item" + nums[i]).mouseenter(function(){
