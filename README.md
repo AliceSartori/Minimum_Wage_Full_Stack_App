@@ -53,7 +53,7 @@ Wage Defenders decieded to review at the United States State and Federal minimum
         4. Time Line<br>
 
 #### Action<br>
-Review of Notebooks
+Review of Notebooks<br>
     1. https://github.com/jgriffin1314/data-analysis-project-2/tree/main/Jupyternotebooks<br>
     2. https://github.com/jgriffin1314/data-analysis-project-2/blob/main/leaflet_part_alice/Minwage.ipynb<br>
     3. https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Beeswarm/bar_chart_data.ipynb<br>
@@ -62,7 +62,14 @@ Review of Flask<br>
     1. https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Resources/flask/app.py<br>
 
 #### Results<br>
+Manny's Chloropleth Map<br>
 ![Manny_CMap](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Manny_CG.png)<hr>
+
+Alice's Chloropleth Map<br>
 ![Alice_Map](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Alice_Map.png)<hr>
+
+Jack's Line Graph<br>
 ![Jack_Line](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Jack_Line.png)<hr>
+
+LaTisha's Bar Graph<br>
 ![LaTisha_Bar](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/LaTisha_Bar.png)<hr>
