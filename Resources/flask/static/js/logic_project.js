@@ -60,9 +60,16 @@ function colormap(geoData, year){
         var layers = [];
         var baselayers = {}
         // for (var i = 1970; i <= 2020; i++) {
+
+        var state_trace_y = []
+        var label_states = []
+
         StatechoroplethLayer = L.choropleth(response, {
             filter: function(feature, layer) {
+              //Filter based on year
               if(feature.properties.Year == year){
+                state_trace_y.push(feature.properties['State.Minimum.Wage'])
+                label_states.push(feature.properties.State)
                 return true;
               }
             },
@@ -88,9 +95,11 @@ function colormap(geoData, year){
         })
 
 
+        var federal_trace_y = []
         FederalchoroplethLayer = L.choropleth(response, {
           filter: function(feature, layer) {
             if(feature.properties.Year == year){
+              federal_trace_y.push(feature.properties['Federal.Minimum.Wage'])
               return true;
             }
           },
@@ -137,8 +146,153 @@ function colormap(geoData, year){
       // L.control.layers({}).addTo(myMap)
       testLayer = L.control.layers(baselayers, null, {collapsed: false}).addTo(myMap);
       StatechoroplethLayer.addTo(myMap)
+
+      chartLine(state_trace_y,federal_trace_y,label_states, year)
   });
 }
+
+
+myMap = L.map("map", {
+  center: [40.5994, -101.6731],
+  zoom:4,
+  // layers: federal_layers.slice(0,1)
+  // layers: [lightmap,base_layers['state']]
+  layers:lightmap
+  // layers: [lightmap, StatechoroplethLayer]
+})
+
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'info legend'),
+        grades = [0, 1, 2, 3, 4, 5, 6, 7],
+        labels = [];
+
+    // loop through our density intervals and generate a label with a colored square for each interval
+    for (var i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    }
+
+    return div;
+};
+legend.addTo(myMap);
+
+
+chartLine(state_trace_y,federal_trace_y,label_states,year)
+
+
+
+function getColor(d) {
+    return d > 7 ? '#800026' :
+           d > 6  ? '#BD0026' :
+           d > 5  ? '#E31A1C' :
+           d > 4  ? '#FC4E2A' :
+           d > 3   ? '#FD8D3C' :
+           d > 2   ? '#FEB24C' :
+           d > 1   ? '#FED976' :
+                      '#FFEDA0';
+}
+
+
+function chartLine(state_trace_y, federal_trace_y, label_states, year){
+  var trace1 = {
+    x: label_states,
+    y: state_trace_y,
+    type: 'scatter',
+    name: 'State',
+  };
+
+  var trace2 = {
+    x: label_states,
+    y: federal_trace_y,
+    type: 'scatter',
+    name: 'Federal',
+  };
+
+  var layout = {
+    xaxis: {
+      tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
+      tick0: 1,
+      dtick: 1,
+      ticktext:label_states
+    },
+    title: {
+      text: "Year: " + year,
+      font: {
+        family: 'Courier New, monospace',
+        size: 24
+      },
+      xref: 'paper',
+      x: 0.05,
+    }
+  }
+  var data = [trace1, trace2];
+  Plotly.newPlot('chartState', data, layout);
+
+
+  // var trace1 = {
+  //   x: label_states,
+  //   y: federal_trace_y,
+  //   type: 'scatter'
+  // };
+  //
+  // var layout = {
+  //   xaxis: {
+  //     tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
+  //     tick0: 1,
+  //     dtick: 1,
+  //     ticktext:label_states
+  //   },
+  //   title: {
+  //     text: "Federal Year: " + year,
+  //     font: {
+  //       family: 'Courier New, monospace',
+  //       size: 24
+  //     },
+  //     xref: 'paper',
+  //     x: 0.05,
+  //   }
+  // }
+  // var data = [trace1];
+  // Plotly.newPlot('chartFederal', data, layout);
+
+}
+
+
+// var trace1 = {
+//   x: label_states,
+//   y: trace_y,
+//   type: 'scatter'
+// };
+
+// var trace2 = {
+//   x: [1, 2, 3, 4],
+//   y: [16, 5, 11, 9],
+//   type: 'scatter'
+// };
+// var layout = {
+//   xaxis: {
+//     tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
+//     tick0: 1,
+//     dtick: 1,
+//     ticktext:label_states
+//   },
+//   title: {
+//   text: "Year: " + year,
+//   font: {
+//     family: 'Courier New, monospace',
+//     size: 24
+//   },
+//   xref: 'paper',
+//   x: 0.05,
+// }
+// }
+//
+// var data = [trace1];
+// Plotly.newPlot('myDiv', data, layout);
+
 
 // function createMap(state_layers , base_layers){
 //
@@ -161,82 +315,3 @@ function colormap(geoData, year){
 //   //   collapsed: false,
 //   // }).addTo(myMap)
 // }
-
-
-myMap = L.map("map", {
-  center: [50.5994, -101.6731],
-  zoom:4,
-  // layers: federal_layers.slice(0,1)
-  // layers: [lightmap,base_layers['state']]
-  layers:lightmap
-  // layers: [lightmap, StatechoroplethLayer]
-})
-
-
-
-function getColor(d) {
-    return d > 7 ? '#800026' :
-           d > 6  ? '#BD0026' :
-           d > 5  ? '#E31A1C' :
-           d > 4  ? '#FC4E2A' :
-           d > 3   ? '#FD8D3C' :
-           d > 2   ? '#FEB24C' :
-           d > 1   ? '#FED976' :
-                      '#FFEDA0';
-}
-
-
-
-var legend = L.control({position: 'bottomright'});
-
-legend.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 1, 2, 3, 4, 5, 6, 7],
-        labels = [];
-
-    // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < grades.length; i++) {
-        div.innerHTML +=
-            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-    }
-
-    return div;
-};
-legend.addTo(myMap);
-
-
-
-
-var trace1 = {
-  x: label_states,
-  y: trace_y,
-  type: 'scatter'
-};
-
-// var trace2 = {
-//   x: [1, 2, 3, 4],
-//   y: [16, 5, 11, 9],
-//   type: 'scatter'
-// };
-var layout = {
-  xaxis: {
-    tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
-    tick0: 1,
-    dtick: 1,
-    ticktext:label_states
-  },
-  title: {
-  text: "Year: " + year,
-  font: {
-    family: 'Courier New, monospace',
-    size: 24
-  },
-  xref: 'paper',
-  x: 0.05,
-}
-}
-
-var data = [trace1];
-
-Plotly.newPlot('myDiv', data, layout);
