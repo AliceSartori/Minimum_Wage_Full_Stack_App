@@ -29,8 +29,10 @@ Wage Defenders decieded to review at the United States State and Federal minimum
         7. Scipy.stats<br>
         8. linregress<br>
         9. Plotly<br>
-        10. Textwrap<br>
-        11. Geopandas<br>
+        10. Leaflet.js <br>
+        11. jQuery <br>
+        12. Textwrap<br>
+        13. Geopandas<br>
     2. Transformations
         1. Loading and Reading CSVs<br>
         2. Encoding<br>
@@ -47,7 +49,7 @@ Wage Defenders decieded to review at the United States State and Federal minimum
     
 5. Frontend (Data Visualization)<br>
     1. We were able to create the following visualization;<br>
-        1. Chloropleth Map<br>
+        1. Chloropleth Map & Line Graph<br>
         2. Line Graph<br>
         3. Bar Graph<br>
         4. Time Line<br>
@@ -62,10 +64,10 @@ Review of Flask<br>
     1. https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Resources/flask/app.py<br>
 
 #### Results<br>
-Manny's Chloropleth Map<br>
+Manny's Chloropleth Map <br>
 ![Manny_CMap](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Manny_CG.png)<hr>
 
-Alice's Chloropleth Map<br>
+Alice's Chloropleth Map & Line Graph <br>
 ![Alice_Map](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Alice_Map.png)<hr>
 
 Jack's Line Graph<br>
