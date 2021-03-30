@@ -29,20 +29,18 @@ def createmap():
     engine = create_engine('postgresql+psycopg2://alicesartori@localhost/Project_3')
     conn = engine.connect()
 
-    sql_string ='SELECT state, state_minimum_wage, year FROM geography WHERE year=\'%s\'' % (year)
+    sql_string ='SELECT state, state_minimum_wage,federal_minimum_wage ,year FROM geography WHERE year=\'%s\'' % (year)
     rows = engine.execute(sql_string).fetchall()
 
-    minimum_wage = []
+    federal_minimum_wage = []
+    state_minimum_wage = []
     state_list = []
     for index, row in enumerate(rows):
-        minimum_wage.append(row[1])
         state_list.append(row[0].strip())
+        federal_minimum_wage.append(row[1])
+        state_minimum_wage.append(row[2])
 
-    #data2pass = [1,10,20,5,40]
-    #trace_x = [1,2,3,4,10]
-
-    print(state_list)
-    return render_template("index_alice.html",value=year ,trace_y = minimum_wage , labels=state_list)
+    return render_template("index_alice.html",value=year ,state_trace_y = state_minimum_wage, federal_trace_y = federal_minimum_wage,labels=state_list)
 
 @app.route("/barchart")
 def createchart():

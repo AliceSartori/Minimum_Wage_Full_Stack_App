@@ -2,7 +2,7 @@
 
 ## Team Members: LaTisha Habersham, Manny Mejia, Alice Sartori and Jack Griffin
 
-![Min Wage](https://media.giphy.com/media/McTlbb1oyHvHm2ToXp/giphy.gif)<center>
+![Min Wage](https://media.giphy.com/media/McTlbb1oyHvHm2ToXp/giphy.gif)<br>
 
 ### Summary and Motivation
 The first US minimum wage was set in 1938 due to The Fair Labor Standards Act (FLSA). It was pass by Franklin D. Roosevelt through his New Deal to protect workers from The Great Depression. The purpose of the minimum wage was to stabilize the post-depression economy and protect the workers in the labor force. The minimum wage was designed to create a minimum standard of living to protect the health and well-being of employees. The idea was the hope of greater equity and the distribution of income between the high paid and the low pay may to be narrowed. Poverty may be reduced as the low earners gain more income and the unemployed may be encouraged to join the labour market.<br>
@@ -52,12 +52,24 @@ Wage Defenders decieded to review at the United States State and Federal minimum
         3. Bar Graph<br>
         4. Time Line<br>
 
-#### Action
-(Link to notebooks here)<br>
-(Link to python here)<br>
+#### Action<br>
+Review of Notebooks<br>
+    1. https://github.com/jgriffin1314/data-analysis-project-2/tree/main/Jupyternotebooks<br>
+    2. https://github.com/jgriffin1314/data-analysis-project-2/blob/main/leaflet_part_alice/Minwage.ipynb<br>
+    3. https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Beeswarm/bar_chart_data.ipynb<br>
 
-#### Results
-(Link to picture of Chloropleth Map)<br>
-(Link to picture of Line graph)<br>
-(Link to picture of Bar Graph)<br>
-(Link to picture of Time Line)<br>
+Review of Flask<br>
+    1. https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Resources/flask/app.py<br>
+
+#### Results<br>
+Manny's Chloropleth Map<br>
+![Manny_CMap](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Manny_CG.png)<hr>
+
+Alice's Chloropleth Map<br>
+![Alice_Map](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Alice_Map.png)<hr>
+
+Jack's Line Graph<br>
+![Jack_Line](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/Jack_Line.png)<hr>
+
+LaTisha's Bar Graph<br>
+![LaTisha_Bar](https://github.com/jgriffin1314/data-analysis-project-2/blob/main/LaTisha_Bar.png)<hr>

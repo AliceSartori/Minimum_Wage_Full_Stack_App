@@ -27,14 +27,24 @@
 
     <script>
       var year = {{value}}
-      var trace_y = {{trace_y}}
+      var state_trace_y = {{state_trace_y}}
+      var federal_trace_y = {{federal_trace_y}}
       var label_states = {{labels | tojson}}
-      console.log(label_states)
     </script>
 
+
     <!-- <a href='/'>HOME</a> -->
-    <div id="map" style="width:80%;height:80%;margin:0 auto;" ></div>
-    <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+
+    <div id="map" style="width:100%;height:50%;margin:0 auto;" ></div>
+    <div id='chartState'><!-- Plotly chart will be drawn inside this DIV --></div>
+
+
+
+    <!-- <div style="width:5%;height:5%;margin:0 auto;">
+        <select name="years" id="years_trace" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        </select>
+    </div> -->
+
   <!-- </div> -->
     <!-- Leaflet JS-->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
