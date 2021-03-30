@@ -9,11 +9,6 @@ $(document).ready(function(){
   $.easing.easeOutCubic = function (x, t, b, c, d) {
     return c*((t=t/d-1)*t*t + 1) + b;
   }
-
-$(document).on('click','.test li', function(){
-    alert($(this).text());
-    return false;
- });
   
   for(i=0; i<=nums.length; i++){
     $(".tl-item" + nums[i]).mouseenter(function(){
@@ -30,19 +25,31 @@ $(document).on('click','.test li', function(){
       }
     });
   }
+  
+//   console.log("Here");
+//   $(".active").click('li a', function(){
+//     console.log("Here");
+//     alert($(this).text());
+//     // return false;
+//  });
 });
 
+function myFunction() {
+  document.getElementById("timeline1");
+  console.log("Hi");
 
-$(document).on("click", ".test li", ClickAlerter); 
-
-function ClickAlerter(event) {
-    alert("Hi!"); 
 }
 
-// $(document).ready(function(){
-$(document).on('click','.test li', function(){
-  alert($(this).text());
-});
+// $(document).on("click", ".test li", ClickAlerter); 
+
+// function ClickAlerter(event) {
+//     alert("Hi!"); 
+// }
+
+// // $(document).ready(function(){
+// $(document).on('click','.test li', function(){
+//   alert($(this).text());
+// });
 // });
 
 // $(document).ready(function(){

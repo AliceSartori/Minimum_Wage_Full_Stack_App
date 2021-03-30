@@ -1,0 +1,115 @@
+body{
+    margin: 0%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "t t t t t t t t t"
+    "b b b b b b b b b"
+    "b b b b b b b b b"
+    "b b b b b b b b b"
+    "b b b b b b b b b"
+    ;
+}     
+
+.top{
+    grid-area: t;
+    background: goldenrod;
+    height:100%;
+    border-bottom: 2px solid #386280;
+}
+
+.top p{
+    grid-area: t;
+    background-color: rgb(56, 158, 158);
+    color: white;
+    position: relative;
+    font-size: 23px;
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 6%;
+    text-align: center;
+    font-weight: bold;
+    line-height: 51px;
+    float: left;
+    margin-left: 0.15%;
+}
+
+.top a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 23px;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    float: right;
+    font-size: 16px;
+    color: #386280;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #386280;
+    padding: 14.5px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    font-weight: bold;
+    /* background-color: black; */
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: goldenrod;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #386280;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+svg{
+    grid-area: b;
+  
+}
+
+#my_dataviz p{
+    margin: 0%;
+}

@@ -17,7 +17,7 @@
     <div class = "top">
       <div class="navbar">
         <a href="">About</a>
-        <a href="">Comparison</a>
+        <a href="/">Home</a>
         <div class="dropdown">
           <button class="dropbtn">Plots 
             <i class="fa fa-caret-down"></i>
@@ -26,7 +26,7 @@
             <a href="map">Chloropleth Map</a>
             <a href="linechart">Line Chart</a>
             <a href="barchart">Bar Chart</a>
-            <a href="bubblechart">Bubble Chart</a>
+            <a href="staticLine">Static Line Chart</a>
           </div>
         </div> 
       </div>
@@ -468,10 +468,10 @@
 
               </p>
             </div>
-            <div id="timeline1">
-              <ul class="test">
+            <div id="timeline1" onclick="myFunction()">
+              <ul id="test">
                 <!-- <li data-toggle="modal" data-target="#modalnew" data-whatever="1970" class="openmodal"><a >1970</a></li> -->
-                <li class="active"><a href="" class="timelineYear">1970</a></li>
+                <li id="active" onclick="myFunction()"><a onclick="myFunction()" class="timelineYear">1970</a></li>
                 <li><a href="" class="timelineYear">1971</a></li>
                 <li><a href="" class="timelineYear">1972</a></li>
                 <li><a href="" class="timelineYear">1973</a></li>
@@ -612,7 +612,7 @@
         </section>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js""></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="../static/js/project-2.js"></script>

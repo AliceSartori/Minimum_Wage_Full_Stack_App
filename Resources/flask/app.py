@@ -58,5 +58,11 @@ def createlinechart():
 
     return render_template("index_jack.html")
 
+@app.route("/staticLine")
+def staticlinechart():
+
+    return render_template("test.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
