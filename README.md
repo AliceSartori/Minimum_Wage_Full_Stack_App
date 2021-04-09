@@ -15,8 +15,7 @@ Wage Defenders decieded to review at the United States State and Federal minimum
 
     1. Minimum wage Data in the US by state: https://www.kaggle.com/lislejoem/us-minimum-wage-by-state-from-1968-to-2017?select=Minimum+Wage+Data.csv<br>
     2. US States Lat & Long: https://www.kaggle.com/washimahmed/usa-latlong-for-state-abbreviations<br>
-    3. Total Personal Consumption Expenditures by State: https://apps.bea.gov/iTable/iTable.cfm?reqid=70&step=1&acrdn=7#reqid=70&step=1&acrdn=7<br>
-    4. Geojson of United States: https://github.com/PublicaMundi/MappingAPI/blob/master/data/geojson/us-states.json <br>
+    3. Geojson of United States: https://github.com/PublicaMundi/MappingAPI/blob/master/data/geojson/us-states.json <br>
 
 2. Scripting: We transform our data by using Python (Pandas) to create cleaner CSVs to help create our visualizations. Some of our transformations included;<br>
     1. Importing libraries
